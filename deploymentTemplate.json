@@ -4,13 +4,11 @@
     "parameters": {"storageName": {
         "type": "string",
         "metadata": {
-            "description": "description"
-        },
-        "minLength": 6,
-        "maxLength": 18
+            "description": "Escribe tu nombre de cuenta de almacenamiento"
+        }
     },"storageSKU": {
         "type": "string",
-        "allowedValues": [
+         "allowedValues": [
         "Standard_LRS",
         "Standard_GRS",
         "Standard_RAGRS",
@@ -36,8 +34,8 @@
         "location": "[resourceGroup().location]",
         "kind": "StorageV2",
         "sku": {
-            "name": "[parameters('storageSKU')]",
-            "tier": "Standard"
+            "name": "[parameters('storageSku')]",
+            "tier": "Premium"
         }
     }],
     "outputs": {}
